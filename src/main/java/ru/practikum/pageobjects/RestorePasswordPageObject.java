@@ -1,4 +1,4 @@
-package ru.practikum.PageObjects;
+package ru.practikum.pageobjects;
 
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;

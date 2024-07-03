@@ -5,10 +5,10 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import ru.practikum.api.register.GenerateUser;
 import ru.practikum.api.steps.UserSteps;
-import ru.practikum.PageObjects.LoginPageObject;
-import ru.practikum.PageObjects.MainPageObject;
-import ru.practikum.PageObjects.RegisterPageObject;
-import ru.practikum.WebDriverFactory.WebDriverFactory;
+import ru.practikum.pageobjects.LoginPageObject;
+import ru.practikum.pageobjects.MainPageObject;
+import ru.practikum.pageobjects.RegisterPageObject;
+import ru.practikum.webdriverfactory.WebDriverFactory;
 
 import static io.restassured.RestAssured.baseURI;
 import static org.hamcrest.Matchers.*;

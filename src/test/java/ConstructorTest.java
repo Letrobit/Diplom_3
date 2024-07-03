@@ -3,8 +3,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import ru.practikum.PageObjects.MainPageObject;
-import ru.practikum.WebDriverFactory.WebDriverFactory;
+import ru.practikum.pageobjects.MainPageObject;
+import ru.practikum.webdriverfactory.WebDriverFactory;
 
 import java.util.concurrent.TimeUnit;
 

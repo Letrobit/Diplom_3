@@ -5,8 +5,8 @@ import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import ru.practikum.api.register.GenerateUser;
 import ru.practikum.api.steps.UserSteps;
-import ru.practikum.PageObjects.*;
-import ru.practikum.WebDriverFactory.WebDriverFactory;
+import ru.practikum.pageobjects.*;
+import ru.practikum.webdriverfactory.WebDriverFactory;
 
 import static io.restassured.RestAssured.baseURI;
 import static java.time.Duration.ofSeconds;
