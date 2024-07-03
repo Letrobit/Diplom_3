@@ -1,5 +1,6 @@
 package ru.practikum.PageObjects;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -21,29 +22,35 @@ public class ProfilePageObject {
         this.driver = driver;
     }
 
+    @Step("Checks if text on profile page is visible to see if page loaded")
     public boolean profileTextIsVisible() {
         new WebDriverWait(driver, ofSeconds(5)).until(ExpectedConditions.visibilityOfElementLocated(lichniyKabinetText));
         WebElement element = driver.findElement(lichniyKabinetText);
         return element.isDisplayed();
     }
 
+    @Step("Checks if personal info fields on profile page are visible to see if page loaded")
     public boolean profileInputFieldIsVisible() {
         new WebDriverWait(driver, ofSeconds(5)).until(ExpectedConditions.visibilityOfElementLocated(lichniyKabinetInputFields));
         WebElement element = driver.findElement(lichniyKabinetInputFields);
         return element.isDisplayed();
     }
 
+    @Step("Click stellar burgers logo on profile page")
     public void lichniyKabinetLogoClick() {
         new WebDriverWait(driver, ofSeconds(5)).until(ExpectedConditions.visibilityOfElementLocated(lichniyKabinetLogoButton));
         WebElement element = driver.findElement(lichniyKabinetLogoButton);
         element.click();
     }
 
+    @Step("Click constructor button on profile page")
     public void lichniyKabinetConstructorButtonClick() {
         new WebDriverWait(driver, ofSeconds(5)).until(ExpectedConditions.visibilityOfElementLocated(lichniyKabinetConstructorButton));
         WebElement element = driver.findElement(lichniyKabinetConstructorButton);
         element.click();
     }
+
+    @Step("Click logout button on profile page")
     public void lichniyKabinetLogoutButtonButtonClick() {
         new WebDriverWait(driver, ofSeconds(5)).until(ExpectedConditions.visibilityOfElementLocated(lichniyKabinetLogoutButton));
         WebElement element = driver.findElement(lichniyKabinetLogoutButton);

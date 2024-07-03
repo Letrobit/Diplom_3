@@ -1,4 +1,4 @@
-package ru.practikum.API.dto;
+package ru.practikum.api.dto;
 
 import lombok.Getter;
 import lombok.Setter;

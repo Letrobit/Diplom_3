@@ -1,12 +1,12 @@
 package ru.practikum.PageObjects;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import ru.practikum.API.register.GenerateUser;
+import ru.practikum.api.register.GenerateUser;
 
 import static java.time.Duration.ofSeconds;
 
@@ -23,6 +23,7 @@ public class RegisterPageObject {
         this.driver = driver;
     }
 
+    @Step("Enter personal info on register page to create user")
     public void enterRegisterData(GenerateUser generateUser) {
 
         WebElement nameInput = driver.findElement(registerPageNameField);
@@ -37,16 +38,21 @@ public class RegisterPageObject {
         new WebDriverWait(driver, ofSeconds(5)).until(ExpectedConditions.elementToBeClickable(registerPageRegisterButton));
     }
 
+    @Step("Click register button on register page")
     public void clickRegisterButtonRegisterPage() {
         WebElement element = driver.findElement(registerPageRegisterButton);
         element.click();
     }
-    public boolean checkIfPasswordErrorIsVisible(){
+
+    @Step("Enter incorrect password and check if password is incorrect message is visible on register page (returns true/false)")
+    public boolean checkIfPasswordErrorIsVisible() {
         WebElement emailInput = driver.findElement(registerPageEmailField);
         emailInput.click();
         WebElement element = driver.findElement(incorrectPasswordError);
         return element.isDisplayed();
     }
+
+    @Step("Click login button on register page")
     public void clickLoginButtonRegisterPage() {
         WebElement element = driver.findElement(loginButtonRegisterPage);
         element.click();

@@ -1,23 +1,18 @@
-import io.restassured.RestAssured;
-import io.restassured.filter.log.RequestLoggingFilter;
-import io.restassured.filter.log.ResponseLoggingFilter;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import ru.practikum.API.register.GenerateUser;
-import ru.practikum.API.steps.UserSteps;
+import ru.practikum.api.register.GenerateUser;
+import ru.practikum.api.steps.UserSteps;
 import ru.practikum.PageObjects.LoginPageObject;
 import ru.practikum.PageObjects.MainPageObject;
 import ru.practikum.PageObjects.RegisterPageObject;
-import ru.practikum.PageObjects.RestorePasswordPageObject;
 import ru.practikum.WebDriverFactory.WebDriverFactory;
 
 import static io.restassured.RestAssured.baseURI;
 import static org.hamcrest.Matchers.*;
-import static ru.practikum.CONSTANTS.STELLAR_BURGER.*;
+import static ru.practikum.constants.StellarBurgerStaticConstants.*;
 
 public class RegisterTest {
     private UserSteps userSteps = new UserSteps();

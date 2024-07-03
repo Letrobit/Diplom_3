@@ -1,11 +1,11 @@
-package ru.practikum.API.steps;
+package ru.practikum.api.steps;
 
 import io.restassured.http.ContentType;
 import io.restassured.response.ValidatableResponse;
 import io.qameta.allure.Step;
-import ru.practikum.API.dto.CreateUserRequest;
-import ru.practikum.API.dto.LoginUserRequest;
-import ru.practikum.API.register.GenerateUser;
+import ru.practikum.api.dto.CreateUserRequest;
+import ru.practikum.api.dto.LoginUserRequest;
+import ru.practikum.api.register.GenerateUser;
 
 import static io.restassured.RestAssured.given;
 

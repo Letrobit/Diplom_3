@@ -1,5 +1,6 @@
 package ru.practikum.PageObjects;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -13,7 +14,8 @@ public class RestorePasswordPageObject {
 
     private final By restorePasswordPageLoginButton = By.xpath("//a[.='Войти']");
 
-    public void clickRestorePasswordPageLoginButton(){
+    @Step("Click restore button on restore password page")
+    public void clickRestorePasswordPageLoginButton() {
         WebElement element = driver.findElement(restorePasswordPageLoginButton);
         element.click();
     }

@@ -3,18 +3,16 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import ru.practikum.API.register.GenerateUser;
-import ru.practikum.API.steps.UserSteps;
+import ru.practikum.api.register.GenerateUser;
+import ru.practikum.api.steps.UserSteps;
 import ru.practikum.PageObjects.*;
 import ru.practikum.WebDriverFactory.WebDriverFactory;
 
 import static io.restassured.RestAssured.baseURI;
 import static java.time.Duration.ofSeconds;
 import static org.hamcrest.Matchers.is;
-import static ru.practikum.CONSTANTS.STELLAR_BURGER.STELLAR_BURGER_URI;
-import static ru.practikum.CONSTANTS.STELLAR_BURGER.STELLAR_BURGER_WEBSITE_URL;
+import static ru.practikum.constants.StellarBurgerStaticConstants.STELLAR_BURGER_URI;
+import static ru.practikum.constants.StellarBurgerStaticConstants.STELLAR_BURGER_WEBSITE_URL;
 
 public class LoginTest {
     private UserSteps userSteps = new UserSteps();

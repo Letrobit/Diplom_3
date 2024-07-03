@@ -1,4 +1,4 @@
-package ru.practikum.API.register;
+package ru.practikum.api.register;
 
 
 import lombok.Getter;
